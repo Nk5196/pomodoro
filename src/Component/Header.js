@@ -10,7 +10,7 @@ import {
     MenuButton,
     MenuList,
     MenuItem,
-  } from '@chakra-ui/react'
+} from '@chakra-ui/react'
 const Header = () => {
     const navigate = useNavigate();
     const auth = getAuth();
@@ -22,12 +22,12 @@ const Header = () => {
             if (user) {
                 setUser(user);
             } else {
-                // User is signed out
+
                 setUser(null);
             }
         });
 
-        // Clean up the observer when the component unmounts
+
         return () => unsubscribe();
     }, []);
 
@@ -50,21 +50,21 @@ const Header = () => {
                 </Heading>
                 <Spacer />
                 <Flex>
-                   
+
                     <Spacer />
                     <Show above='sm'>
-                       
+
                         <Menu>
                             {({ isOpen }) => (
                                 <>
                                     <MenuButton isActive={isOpen} as={Button} backgroundColor='black' _hover='none' mt={0} >
-                                    <BiSolidUser color='white' />
+                                        <BiSolidUser color='white' />
                                     </MenuButton>
-                                    {user &&  <MenuList backgroundColor='black' >
-                                        
-                                        <MenuItem backgroundColor='black'  onClick={handleLogout}>{user && `Logout - ${user.displayName}` }</MenuItem>
+                                    {user && <MenuList backgroundColor='black' >
+
+                                        <MenuItem backgroundColor='black' onClick={handleLogout}>{user && `Logout - ${user.displayName}`}</MenuItem>
                                     </MenuList>}
-                                   
+
                                 </>
                             )}
                         </Menu>
