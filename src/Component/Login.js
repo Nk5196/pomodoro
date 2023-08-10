@@ -31,20 +31,7 @@ const Login = () => {
         <Container display="flex" justifyContent="center" ht="100px"  h="100vh">
             <Box>
             <Heading as="h2" mb="3" fontWeight={'semibold'}>Login</Heading>
-                <Input
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    mb="3"
-                />
-                <Input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    mb="3"
-                />
+                
                 
                 <GoogleButton w='full' colorScheme="red" onClick={handleGoogleLogin} ></GoogleButton>
                 <Text mt="3">
